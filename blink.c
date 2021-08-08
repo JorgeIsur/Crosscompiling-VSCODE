@@ -25,7 +25,5 @@ int main(void)
         gpioDelay(500);
     }
     gpioTerminate();
-    
-    return 0;
 }
 
