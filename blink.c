@@ -10,7 +10,7 @@
 #include <unistd.h>
 
 //Definición del PIN de acuerdo al broadcom
-#define LED 3
+#define LED 4
 
 int main(void)
 {
