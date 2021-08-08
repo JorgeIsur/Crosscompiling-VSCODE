@@ -3,6 +3,8 @@
     Fecha: 7 de agosto de 2021
     Descripción: Manipula los pines GPIO para encender un led, compilado en una 
     computadora con arquitectura x86_64 para un dispositivo arm64 raspberry pi 3 model B+
+
+    GPIO4--->Pin7
 */
 #include <stdio.h>
 #include <pigpio.h>
@@ -21,10 +23,10 @@ int main(void)
     {
         gpioWrite(LED, 1); //on
         printf("Hola\n");
-        sleep(5);  //ms
+        sleep(1);  //seconds
         gpioWrite(LED,0);  //off
         printf("Adios\n");
-        sleep(5);
+        sleep(1);
     }
     gpioTerminate();
 }
