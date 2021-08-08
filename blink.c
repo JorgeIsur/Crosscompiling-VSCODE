@@ -12,7 +12,7 @@
 
 int main(void)
 {
-    printf("Hola samsung innovation campus!");
+    printf("Hola samsung innovation campus!\n");
     gpioInitialise();
     gpioSetMode(LED, PI_OUTPUT);
     for (int i = 0; i < 10; i++)
@@ -24,6 +24,7 @@ int main(void)
         printf("Adios\n");
         gpioDelay(500);
     }
+    gpioTerminate();
     
     return 0;
 }
