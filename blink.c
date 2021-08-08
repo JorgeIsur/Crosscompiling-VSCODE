@@ -6,6 +6,8 @@
 */
 #include <stdio.h>
 #include <pigpio.h>
+#include <time.h>
+#include <unistd.h>
 
 //Definición del PIN de acuerdo al broadcom
 #define LED 7
@@ -13,16 +15,16 @@
 int main(void)
 {
     printf("Hola samsung innovation campus!\n");
-    gpioInitialise();
+    if (gpioInitialise()<0) return 1;
     gpioSetMode(LED, PI_OUTPUT);
     for (int i = 0; i < 10; i++)
     {
         gpioWrite(LED, 1); //on
         printf("Hola\n");
-        gpioDelay(500);  //ms
+        sleep(5);  //ms
         gpioWrite(LED,0);  //off
         printf("Adios\n");
-        gpioDelay(500);
+        sleep(5);
     }
     gpioTerminate();
 }
