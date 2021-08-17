@@ -59,7 +59,7 @@ int main()
         case 1:
             do
             {
-              inicio=time(&inicio);
+                time(&inicio);
                 gpioWrite(LED, 1);
                 if (inicio>0.2 && inicio<0.4)
                 {
@@ -76,7 +76,7 @@ int main()
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
-                final=time(&final);
+                time(&final);
                 seconds = difftime(inicio,final);
                 printf("Proceso terminado en %.21f segundos\n", seconds);
             } while (seconds<5);
