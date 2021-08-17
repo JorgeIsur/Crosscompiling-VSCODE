@@ -75,7 +75,8 @@ int main()
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
-            } while (tiempo<5);
+            } while (tiempo<5
+              gpioTerminate();
             break;
         case 2:
             tiempo=clock();
@@ -96,6 +97,7 @@ int main()
                 }
 
             } while (tiempo<5);
+            gpioTerminate();
             break;
         case 3:
             tiempo= clock();
@@ -118,6 +120,7 @@ int main()
                     gpioWrite(LED,1);
                 }
             } while (tiempo<5);
+            gpioTerminate();
             break;
         case 4:
             tiempo=clock();
@@ -138,6 +141,7 @@ int main()
                 }
 
             } while (tiempo<5);
+            gpioTerminate();
             break;
         case 5:
             tiempo= clock();
@@ -216,6 +220,7 @@ int main()
                 }
 
             } while (tiempo<5);
+            gpioTerminate();
             break;
         case 6:
         tiempo=clock();
@@ -294,9 +299,11 @@ int main()
             gpioWrite(LED4,1);
           }
         } while (tiempo<5);
+        gpioTerminate();
             break;
         }
     } while (opt!=0);
+    gpioTerminate();
 
 
 }
