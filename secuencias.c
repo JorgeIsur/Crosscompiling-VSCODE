@@ -57,9 +57,9 @@ int main()
         switch (opt)
         {
         case 1:
+            inicio = clock();
             do
             {
-                inicio = clock();
                 gpioWrite(LED, 1);
                 gpioWrite(LED,0);
                 gpioWrite(LED2,1);
