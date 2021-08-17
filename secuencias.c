@@ -80,6 +80,8 @@ int main()
                   gpioWrite(LED3,0);
                   gpioWrite(LED4,1);
                 }
+                control = 0;
+                control_s =0;
                 final = clock();
                 seconds = (float)(control-inicio)/CLOCKS_PER_SEC;
             }while (seconds<5);
