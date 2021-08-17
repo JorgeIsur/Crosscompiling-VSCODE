@@ -35,7 +35,7 @@ int main()
     //int repeticiones;
     time_t inicio, final;
     float seconds;
-    //clock_t tiempo_final;
+    clock_t tiempo;
     int opt;
     gpioSetMode(LED, PI_OUTPUT);
     gpioSetMode(LED2, PI_OUTPUT);
@@ -59,7 +59,7 @@ int main()
         case 1:
             do
             {
-              inicio=time(&inicio)
+              inicio=time(&inicio);
                 gpioWrite(LED, 1);
                 if (inicio>0.2 && inicio<0.4)
                 {
@@ -77,7 +77,7 @@ int main()
                     gpioWrite(LED4,1);
                 }
                 final=time(&final);
-                seconds = difftime(end,start);
+                seconds = difftime(inicio,final);
                 printf("Proceso terminado en %.21f segundos\n", seconds);
             } while (seconds<5);
               break;
