@@ -79,8 +79,7 @@ int main()
                 }
                 printf(tiempo );
             } while (tiempo<5);
-              gpioTerminate();
-            break;
+              break;
         case 2:
             tiempo=clock();
             do
