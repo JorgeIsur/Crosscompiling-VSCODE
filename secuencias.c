@@ -58,11 +58,11 @@ int main()
         {
         case 1:
             inicio = clock();
-            control = clock();
             do
             {
                 gpioWrite(LED, 1);
-                control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
+                control = clock();
+                control_s = (float)(control)/CLOCKS_PER_SEC;
                 if (control_s>0.2 && control_s<0.4) {
                   gpioWrite(LED,0);
                   gpioWrite(LED2,1);
