@@ -33,7 +33,8 @@
 int main()
 {
     //int repeticiones;
-    clock_t tiempo;
+    time_t inicio, final;
+    float seconds;
     //clock_t tiempo_final;
     int opt;
     gpioSetMode(LED, PI_OUTPUT);
@@ -56,49 +57,51 @@ int main()
         switch (opt)
         {
         case 1:
-            tiempo= clock();
-            printf("Tiempo:\t",tiempo );
             do
             {
+              inicio=time(&inicio)
                 gpioWrite(LED, 1);
-                if (tiempo>0.2 && tiempo<0.4)
+                if (inicio>0.2 && inicio<0.4)
                 {
-                  printf("Tiempo:\t",tiempo );
                   gpioWrite(LED,0);
                   gpioWrite(LED2,1);
                 }
-                if (tiempo>0.4 && tiempo<0.6)
+                if (inicio>0.4 && inicio<0.6)
                 {
                     gpioWrite(LED2,0);
                     gpioWrite(LED3,1);
                 }
-                if (tiempo>0.6 && tiempo<0.8)
+                if (inicio>0.6 && inicio<0.8)
                 {
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
-                printf(tiempo );
-            } while (tiempo<5);
+                final=time(&final);
+                seconds = difftime(end,start);
+                printf("Proceso terminado en %.21f segundos\n", seconds);
+            } while (seconds<5);
               break;
         case 2:
-            tiempo=clock();
             do
             {
+              inicio=time(&inicio);
                 gpioWrite(LED,1);
-                if (tiempo>0.2 && tiempo<0.4)
+                if (inicio>0.2 && inicio<0.4)
                 {
                     gpioWrite(LED2,1);
                 }
-                if (tiempo>0.4 && tiempo<0.6)
+                if (inicio>0.4 && inicio<0.6)
                 {
                     gpioWrite(LED3,1);
                 }
-                if (tiempo>0.6 && tiempo<0.8)
+                if (inicio>0.6 && inicio<0.8)
                 {
                     gpioWrite(LED4,1);
                 }
-
-            } while (tiempo<5);
+                final=time(&final);
+                seconds = difftime(inicio,final);
+                printf("Proceso terminado en %.21f segundos\n", seconds);
+            } while (seconds<5);
             gpioTerminate();
             break;
         case 3:
