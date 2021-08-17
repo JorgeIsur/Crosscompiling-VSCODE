@@ -76,7 +76,6 @@ int main()
                     gpioWrite(LED4,1);
                 }
             } while (tiempo<5);
-            tiempo = 0;
             break;
         case 2:
             tiempo=clock();
@@ -97,7 +96,6 @@ int main()
                 }
 
             } while (tiempo<5);
-            tiempo=0;
             break;
         case 3:
             tiempo= clock();
@@ -120,7 +118,6 @@ int main()
                     gpioWrite(LED,1);
                 }
             } while (tiempo<5);
-            tiempo = 0;
             break;
         case 4:
             tiempo=clock();
@@ -141,7 +138,6 @@ int main()
                 }
 
             } while (tiempo<5);
-            tiempo=0;
             break;
         case 5:
             tiempo= clock();
@@ -164,7 +160,6 @@ int main()
                 gpioWrite(LED4,1);
               }
             } while (tiempo<5);
-            tiempo = 0;
             tiempo=clock();
             do
             {
@@ -183,7 +178,6 @@ int main()
                 }
 
             } while (tiempo<5);
-            tiempo=0;
             tiempo= clock();
             do
             {
@@ -204,7 +198,6 @@ int main()
                     gpioWrite(LED,1);
                 }
             } while (tiempo<5);
-            tiempo = 0;
             tiempo=clock();
             do
             {
@@ -223,7 +216,6 @@ int main()
                 }
 
             } while (tiempo<5);
-            tiempo=0;
             break;
         case 6:
         tiempo=clock();
@@ -244,7 +236,6 @@ int main()
             }
 
         } while (tiempo<5);
-        tiempo=0;
         tiempo= clock();
         do
         {
@@ -265,7 +256,6 @@ int main()
                 gpioWrite(LED,1);
             }
         } while (tiempo<5);
-        tiempo = 0;
         tiempo=clock();
         do
         {
@@ -284,7 +274,6 @@ int main()
             }
 
         } while (tiempo<5);
-        tiempo=0;
         tiempo= clock();
         do
         {
@@ -305,7 +294,6 @@ int main()
             gpioWrite(LED4,1);
           }
         } while (tiempo<5);
-        tiempo = 0;
             break;
         }
     } while (opt!=0);
