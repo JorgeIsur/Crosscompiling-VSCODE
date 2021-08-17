@@ -45,6 +45,7 @@ int main()
     if (gpioInitialise()<0) return 1; //significa que si no se inicializa, falló
     //printf("Ingresa el número de veces que se repetirá el programa:\t");
     //scanf("%i", &repeticiones);
+    gpioInitialise();
     do
     {
         printf("Secuencia exclusiva ascendente--->1\n");
