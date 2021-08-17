@@ -26,9 +26,9 @@
 #include <time.h>
 //definicion de leds
 #define LED 4
-#define LED2 13
-#define LED3 15
-#define LED4 29
+#define LED2 27
+#define LED3 22
+#define LED4 5
 
 int main()
 {
