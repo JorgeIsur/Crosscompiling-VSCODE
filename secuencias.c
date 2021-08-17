@@ -34,7 +34,7 @@ int main()
 {
     int repeticiones;
     clock_t tiempo;
-    clock_t tiempo_final;
+    //clock_t tiempo_final;
     int opt;
     gpioSetMode(LED, PI_OUTPUT);
     gpioSetMode(LED2, PI_OUTPUT);
@@ -52,6 +52,7 @@ int main()
         printf("Secuencia aditiva descendente---->4\n");
         printf("Todas---------------------------->5\n");
         printf("Todas(Inverso)------------------->6\n");
+        scanf("%i",&opt);
         switch (opt)
         {
         case 1:
