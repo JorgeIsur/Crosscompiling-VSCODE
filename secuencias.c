@@ -32,7 +32,7 @@
 
 int main()
 {
-    int repeticiones;
+    //int repeticiones;
     clock_t tiempo;
     //clock_t tiempo_final;
     int opt;
@@ -42,8 +42,8 @@ int main()
     gpioSetMode(LED4, PI_OUTPUT);
 
     if (gpioInitialise()<0) return 1; //significa que si no se inicializa, falló
-    printf("Ingresa el número de veces que se repetirá el programa:\t");
-    scanf("%i", &repeticiones);
+    //printf("Ingresa el número de veces que se repetirá el programa:\t");
+    //scanf("%i", &repeticiones);
     do
     {
         printf("Secuencia exclusiva ascendente--->1\n");
@@ -75,7 +75,7 @@ int main()
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
-            } while (tiempo<5
+            } while (tiempo<5);
               gpioTerminate();
             break;
         case 2:
@@ -222,88 +222,7 @@ int main()
             } while (tiempo<5);
             gpioTerminate();
             break;
-        case 6:
-        tiempo=clock();
-        do
-        {
-            gpioWrite(LED4,1);
-            if (tiempo>0.2 && tiempo<0.4)
-            {
-                gpioWrite(LED3,1);
-            }
-            if (tiempo>0.4 && tiempo<0.6)
-            {
-                gpioWrite(LED2,1);
-            }
-            if (tiempo>0.6 && tiempo<0.8)
-            {
-                gpioWrite(LED,1);
-            }
-
-        } while (tiempo<5);
-        tiempo= clock();
-        do
-        {
-            gpioWrite(LED4, 1);
-            if (tiempo>0.2 && tiempo<0.4)
-            {
-                gpioWrite(LED4,0);
-                gpioWrite(LED3,1);
-            }
-            if (tiempo>0.4 && tiempo<0.6)
-            {
-                gpioWrite(LED3,0);
-                gpioWrite(LED2,1);
-            }
-            if (tiempo>0.6 && tiempo<0.8)
-            {
-                gpioWrite(LED2,0);
-                gpioWrite(LED,1);
-            }
-        } while (tiempo<5);
-        tiempo=clock();
-        do
-        {
-            gpioWrite(LED,1);
-            if (tiempo>0.2 && tiempo<0.4)
-            {
-                gpioWrite(LED2,1);
-            }
-            if (tiempo>0.4 && tiempo<0.6)
-            {
-                gpioWrite(LED3,1);
-            }
-            if (tiempo>0.6 && tiempo<0.8)
-            {
-                gpioWrite(LED4,1);
-            }
-
-        } while (tiempo<5);
-        tiempo= clock();
-        do
-        {
-          gpioWrite(LED, 1);
-          if (tiempo>0.2 && tiempo<0.4)
-          {
-            gpioWrite(LED,0);
-            gpioWrite(LED2,1);
           }
-          if (tiempo>0.4 && tiempo<0.6)
-          {
-            gpioWrite(LED2,0);
-            gpioWrite(LED3,1);
-          }
-          if (tiempo>0.6 && tiempo<0.8)
-          {
-            gpioWrite(LED3,0);
-            gpioWrite(LED4,1);
-          }
-        } while (tiempo<5);
-        gpioTerminate();
-            break;
-        }
     } while (opt!=0);
     gpioTerminate();
-
-
 }
