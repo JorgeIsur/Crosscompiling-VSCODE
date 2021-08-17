@@ -37,11 +37,11 @@ int main()
     float seconds;
     clock_t tiempo;
     int opt;
+    gpioInitialise();
     gpioSetMode(LED, PI_OUTPUT);
     gpioSetMode(LED2, PI_OUTPUT);
     gpioSetMode(LED3, PI_OUTPUT);
     gpioSetMode(LED4, PI_OUTPUT);
-    gpioInitialise();
     if (gpioInitialise()<0) return 1; //significa que si no se inicializa, falló
     //printf("Ingresa el número de veces que se repetirá el programa:\t");
     //scanf("%i", &repeticiones);
