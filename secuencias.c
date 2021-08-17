@@ -57,6 +57,7 @@ int main()
         {
         case 1:
             tiempo= clock();
+            printf("Tiempo:\t",tiempo );
             do
             {
                 gpioWrite(LED, 1);
