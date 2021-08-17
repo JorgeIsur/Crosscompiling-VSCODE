@@ -63,8 +63,9 @@ int main()
                 gpioWrite(LED, 1);
                 if (tiempo>0.2 && tiempo<0.4)
                 {
-                    gpioWrite(LED,0);
-                    gpioWrite(LED2,1);
+                  printf("Tiempo:\t",tiempo );
+                  gpioWrite(LED,0);
+                  gpioWrite(LED2,1);
                 }
                 if (tiempo>0.4 && tiempo<0.6)
                 {
@@ -76,6 +77,7 @@ int main()
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
+                printf("Tiempo:\t",tiempo );
             } while (tiempo<5);
               gpioTerminate();
             break;
