@@ -78,10 +78,9 @@ int main()
                   gpioWrite(LED3,0);
                   gpioWrite(LED4,1);
                 }
-                control = 0;
                 control_s =0;
                 final = clock();
-                seconds = (float)(control-inicio)/CLOCKS_PER_SEC;
+                seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
             }while (seconds<5);
               gpioWrite(LED,0);
               gpioWrite(LED4,0);
