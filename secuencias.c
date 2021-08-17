@@ -77,7 +77,7 @@ int main()
                     gpioWrite(LED3,0);
                     gpioWrite(LED4,1);
                 }
-                printf("Tiempo:\t",tiempo );
+                printf(tiempo );
             } while (tiempo<5);
               gpioTerminate();
             break;
