@@ -1,7 +1,7 @@
 #
 # Set CROSS_PREFIX to prepend to all compiler tools at once for easier
 # cross-compilation.
-CROSS_PREFIX = arm-linux-gnueabi- 
+CROSS_PREFIX = arm-linux-gnueabi-
 CC           = $(CROSS_PREFIX)gcc
 AR           = $(CROSS_PREFIX)ar
 RANLIB       = $(CROSS_PREFIX)ranlib
