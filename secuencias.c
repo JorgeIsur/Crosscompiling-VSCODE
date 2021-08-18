@@ -33,7 +33,7 @@
 int main()
 {
     //int repeticiones;
-    clock_t inicio, final,control;
+    clock_t inicio, final,control,control_final;
     float seconds, control_s;
     clock_t tiempo;
     int opt;
@@ -62,7 +62,6 @@ int main()
             {
                 gpioWrite(LED, 1);
                 control = clock();
-                control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
                 if (control_s>0.2 && control_s<0.4) {
                   gpioWrite(LED,0);
                   gpioWrite(LED2,1);
@@ -75,6 +74,8 @@ int main()
                   gpioWrite(LED3,0);
                   gpioWrite(LED4,1);
                 }
+                control_final = clock();
+                control_s = (float)(control_final-control)/CLOCKS_PER_SEC;
                 final = clock();
                 printf("TIMER:%.2f segundos\n",control_s);
                 seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
