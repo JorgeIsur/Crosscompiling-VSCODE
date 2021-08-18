@@ -62,23 +62,22 @@ int main()
             {
                 gpioWrite(LED, 1);
                 control = clock();
-                control_s = (float)(control)/CLOCKS_PER_SEC;
+                control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
                 printf("tiempo:%.2f segundos\n",control_s);
                 if (control_s>0.2 && control_s<0.4) {
                   gpioWrite(LED,0);
                   gpioWrite(LED2,1);
                 }
-                control_s = (float)(control)/CLOCKS_PER_SEC;
+                control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
                 if (control_s>0.4 && control_s<0.6) {
                   gpioWrite(LED2,0);
                   gpioWrite(LED3,1);
                 }
-                control_s = (float)(control)/CLOCKS_PER_SEC;
+                control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
                 if (control_s>0.6 && control_s<0.8) {
                   gpioWrite(LED3,0);
                   gpioWrite(LED4,1);
                 }
-                control_s =0;
                 final = clock();
                 seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
             }while (seconds<5);
