@@ -62,7 +62,7 @@ int main()
             {
                 control = clock();
                 gpioWrite(LED, 1);
-                control_s = (float)(control_final-control)/CLOCKS_PER_SEC;
+                //control_s = (float)(control_final-control)/CLOCKS_PER_SEC;
                 if (control_s>0.2 && control_s<0.4) {
                   gpioWrite(LED,0);
                   gpioWrite(LED2,1);
@@ -78,6 +78,7 @@ int main()
                   gpioWrite(LED4,1);
                 }
                 control_final=clock();
+                control_s = (float)(control_final-control)/CLOCKS_PER_SEC;
                 final = clock();
                 printf("TIMER:%.2f segundos\n",control_s);
                 //control_s = 0;
