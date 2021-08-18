@@ -59,10 +59,10 @@ int main()
         {
         case 1:
             inicio = clock();
+            gpioWrite(LED, 1);
             do
             {
                 control = clock();
-                gpioWrite(LED, 1);
                 control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
                 if (control_s>0.2 && control_s<0.4) {
                   gpioWrite(LED,0);
@@ -92,10 +92,10 @@ int main()
               break;
         case 2:
         inicio = clock();
+        gpioWrite(LED, 1);
         do
         {
             control = clock();
-            gpioWrite(LED, 1);
             control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
             if (control_s>0.2 && control_s<0.4) {
               gpioWrite(LED2,1);
@@ -113,19 +113,19 @@ int main()
             //control = 0;
             //control_s = 0;
             seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
+            gpioWrite(LED,0);
+            gpioWrite(LED2,0);
+            gpioWrite(LED3,0);
+            gpioWrite(LED4,0);
         }while (seconds<5);
-          gpioWrite(LED,0);
-          gpioWrite(LED2,0);
-          gpioWrite(LED3,0);
-          gpioWrite(LED4,0);
           printf("Proceso terminado en %.21f segundos\n", seconds);
           break;
         case 3:
         inicio = clock();
+        gpioWrite(LED4, 1);
         do
         {
             control = clock();
-            gpioWrite(LED4, 1);
             control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
             if (control_s>0.2 && control_s<0.4) {
               gpioWrite(LED4,0);
@@ -146,19 +146,19 @@ int main()
             //control = 0;
             //control_s = 0;
             seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
+            gpioWrite(LED,0);
+            gpioWrite(LED2,0);
+            gpioWrite(LED3,0);
+            gpioWrite(LED4,0);
         }while (seconds<5);
-          gpioWrite(LED,0);
-          gpioWrite(LED2,0);
-          gpioWrite(LED3,0);
-          gpioWrite(LED4,0);
           printf("Proceso terminado en %.21f segundos\n", seconds);
           break;
         case 4:
         inicio = clock();
+        gpioWrite(LED4, 1);
         do
         {
             control = clock();
-            gpioWrite(LED4, 1);
             control_s = (float)(control-inicio)/CLOCKS_PER_SEC;
             if (control_s>0.2 && control_s<0.4) {
               gpioWrite(LED3,1);
@@ -176,11 +176,11 @@ int main()
             //control = 0;
             //control_s = 0;
             seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
+            gpioWrite(LED,0);
+            gpioWrite(LED2,0);
+            gpioWrite(LED3,0);
+            gpioWrite(LED4,0);
         }while (seconds<5);
-          gpioWrite(LED,0);
-          gpioWrite(LED2,0);
-          gpioWrite(LED3,0);
-          gpioWrite(LED4,0);
           printf("Proceso terminado en %.21f segundos\n", seconds);
           break;
         case 5:
