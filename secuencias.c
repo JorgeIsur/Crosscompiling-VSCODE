@@ -76,6 +76,7 @@ int main()
                   gpioWrite(LED4,1);
                 }
                 final = clock();
+                printf("TIMER:%.2f segundos\n",control_s);
                 seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
             }while (seconds<5);
               gpioWrite(LED,0);
