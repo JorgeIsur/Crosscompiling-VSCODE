@@ -83,11 +83,11 @@ int main()
                 //control = 0;
                 //control_s = 0;
                 seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
+                gpioWrite(LED,0);
+                gpioWrite(LED2,0);
+                gpioWrite(LED3,0);
+                gpioWrite(LED4,0);
             }while (seconds<5);
-              gpioWrite(LED,0);
-              gpioWrite(LED2,0);
-              gpioWrite(LED3,0);
-              gpioWrite(LED4,0);
               printf("Proceso terminado en %.21f segundos\n", seconds);
               break;
         case 2:
