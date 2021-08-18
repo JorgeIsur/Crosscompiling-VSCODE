@@ -79,7 +79,7 @@ int main()
                 }
                 final = clock();
                 printf("TIMER:%.2f segundos\n",control_s);
-                control = 0;
+                //control = 0;
                 //control_s = 0;
                 seconds = (float)(final-inicio)/CLOCKS_PER_SEC;
             }while (seconds<5);
