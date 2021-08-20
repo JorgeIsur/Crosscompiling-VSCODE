@@ -20,6 +20,8 @@
     GPIO27-->Pin13
     GPIO22-->Pin15
     GPIO5--->Pin29
+
+    2021/08/19----->Aún no funciona más alla del case 4.
 */
 #include <stdio.h>
 #include <pigpio.h>
