@@ -1,7 +1,8 @@
 /*
-    Autor:
-    Fecha:
+    Autor: JorgeIsurBalderasRamírez
+    Fecha: 19-08-2021
     Descripción:
+    Dispositivo Objetivo: Raspberry Pi 3 Model B+
     Ejercicio de aplicacion. Hacer un programa para encender 4 leds
     en secuencia exclusiva ascendente durante 5 segundos, encender en secuencia aditiva
     durante 5 segundos, enceder en secuencia descendente exclusiva durante 5 segundos,
